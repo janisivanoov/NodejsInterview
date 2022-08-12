@@ -1,0 +1,17 @@
+$file = 'C:\Users\janis\Desktop\Task1\server.js'
+if(Test-Path -Path $file -PathType Leaf) {
+	try{
+		Write-Host "The file [$file] exist"
+	}
+	catch {
+		throw $_.Exeption.Message
+	}
+}
+
+if(Get-ItemProperty -Path $file){
+	Write-Host "You can edit [$file]"
+} 
+
+else{
+	Write-Host "You cannot edit [$file]"
+}
