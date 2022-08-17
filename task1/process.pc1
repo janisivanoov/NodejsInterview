@@ -15,4 +15,3 @@ if(Get-ItemProperty -Path $file){
 else{
 	Write-Host "You cannot edit [$file]"
 }
-
